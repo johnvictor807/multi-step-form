@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-DNwBmLHB.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DRrl8bdZ.css">
+  </head>
+  <body>
+    <div id="app">
+      <div id="hero">
+        <aside>
+          <div class="left-pane-items">
+            <h1>1</h1>
+            <div class="list">
+              <p>STEP 1</p>
+              <h4>YOUR INFO</h4>
+            </div>
+          </div>
+          <div class="left-pane-items">
+            <h1>2</h1>
+            <div class="list">
+              <p>STEP 2</p>
+              <h4>SELECT PLAN</h4>
+            </div>
+          </div>
+          <div class="left-pane-items">
+            <h1>3</h1>
+            <div class="list">
+              <p>STEP 3</p>
+              <h4>ADD-ONS</h4>
+            </div>
+          </div>
+          <div class="left-pane-items">
+            <h1>4</h1>
+            <div class="list">
+              <p>STEP 4</p>
+              <h4>SUMMARY</h4>
+            </div>
+          </div>
+        </aside>
+        <div class="rightside">
+          <div id="right-side-1">
+            <h3 class="heading1">Personal Info</h3>
+            <p class="subheading">
+              Please provide your name, email address, and phone number.
+            </p>
+            <form>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="username"
+                placeholder="e.g. Stephen King"
+              />
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="user-email"
+                placeholder="e.g. stephenking@lorem.com"
+              />
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="user-phone"
+                placeholder="e.g. +1 234 567 890"
+              />
+            </form>
+          </div>
+          <div id="select-plan">
+            <h3 class="heading1">Select your Plan</h3>
+            <p class="subheading">
+              You have the option of monthly or yearly billing.
+            </p>
+            <div id="thumb">
+              <div class="thumbnails">
+                <img src="/icon-arcade.svg" alt="#" />
+                <div class="text-content">
+                  <h4>Arcade</h4>
+                  <p>$9/mo</p>
+                </div>
+              </div>
+              <div class="thumbnails">
+                <img src="/icon-advanced.svg" alt="#" />
+                <div class="text-content">
+                  <h4>Advanced</h4>
+                  <p>$12/mo</p>
+                </div>
+              </div>
+              <div class="thumbnails">
+                <img src="/icon-pro.svg" alt="#" />
+                <div class="text-content">
+                  <h4>Pro</h4>
+                  <p>$15/mo</p>
+                </div>
+              </div>
+            </div>
+            <div id="thumb2">
+              <div class="thumbnails">
+                <img src="/icon-arcade.svg" alt="#" />
+                <div class="text-content">
+                  <h4>Arcade</h4>
+                  <p>
+                    $90/yr <br />
+                    <b>2 Months free</b>
+                  </p>
+                </div>
+              </div>
+              <div class="thumbnails">
+                <img src="/icon-advanced.svg" alt="#" />
+                <div class="text-content">
+                  <h4>Advanced</h4>
+                  <p>
+                    $120/yr <br />
+                    <b>2 Months free</b>
+                  </p>
+                </div>
+              </div>
+              <div class="thumbnails">
+                <img src="/icon-pro.svg" alt="#" />
+                <div class="text-content">
+                  <h4>Pro</h4>
+                  <p>
+                    $150/yr <br />
+                    <b>2 Months free</b>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="month-year">
+              <label for="month">Monthly</label>
+              <span>
+                <input id="month" name="m-y" type="radio" checked />
+                <input id="year" name="m-y" type="radio" />
+              </span>
+              <label for="year">Yearly</label>
+            </div>
+          </div>
+          <div id="add-ons">
+            <h3 class="heading1">Pick add-ons</h3>
+            <p class="subheading">
+              Add-ons help enhance your gaming experience.
+            </p>
+            <div id="thumb" class="monnth">
+              <div class="addd">
+                <div class="add1">
+                  <input class="online" name="pick" type="checkbox" />
+                  <div class="added">
+                    <label for="online">Online Service</label>
+                    <p>Access to multiplayer Games</p>
+                  </div>
+                </div>
+                <p>+$1/mo</p>
+              </div>
+            </div>
+            <div id="thumb" class="monnth">
+              <div class="addd">
+                <div class="add1">
+                  <input class="online" name="pick" type="checkbox" />
+                  <div class="added">
+                    <label for="online">Larger Storage</label>
+                    <p>Extra 1TB of cloud save</p>
+                  </div>
+                </div>
+                <p>+$2/mo</p>
+              </div>
+            </div>
+            <div id="thumb" class="monnth">
+              <div class="addd">
+                <div class="add1">
+                  <input class="online" name="pick" type="checkbox" />
+                  <div class="added">
+                    <label for="online">Customizable Profile</label>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                </div>
+                <p>+$1/mo</p>
+              </div>
+            </div>
+            <div id="thumb" class="yeaar">
+              <div class="addd">
+                <div class="add1">
+                  <input class="online" name="pick" type="checkbox" />
+                  <div class="added">
+                    <label for="online">Online Service</label>
+                    <p>Access to multiplayer Games</p>
+                  </div>
+                </div>
+                <p>+$10/yr</p>
+              </div>
+            </div>
+            <div id="thumb" class="yeaar">
+              <div class="addd">
+                <div class="add1">
+                  <input class="online" name="pick" type="checkbox" />
+                  <div class="added">
+                    <label for="online">Larger Storage</label>
+                    <p>Extra 1TB of cloud save</p>
+                  </div>
+                </div>
+                <p>+$20/yr</p>
+              </div>
+            </div>
+            <div id="thumb" class="yeaar">
+              <div class="addd">
+                <div class="add1">
+                  <input class="online" name="pick" type="checkbox" />
+                  <div class="added">
+                    <label for="online">Customizable Profile</label>
+                    <p>Custom theme on your profile</p>
+                  </div>
+                </div>
+                <p>+$20/yr</p>
+              </div>
+            </div>
+          </div>
+          <div id="summary">
+            <h3 class="heading1">Finishing Up</h3>
+            <p class="subheading">
+              Double-check that everything looks OK before confirming
+            </p>
+            <div id="thumb">
+              <div class="addd">
+                <div class="added">
+                  <label for="online">Arcade (Yearly)</label>
+                  <p><a href="#">change</a></p>
+                </div>
+                <p>$90/yr</p>
+              </div>
+            </div>
+            <div id="thumb">
+              <div class="addd">
+                <div class="added">
+                  <label for="online">Online service</label> <br />
+                  <label for="online">Larger storage</label>
+                </div>
+                <p>
+                  $10/yr <br />
+                  $20/yr
+                </p>
+              </div>
+            </div>
+            <div id="thumb">
+              <div class="addd">
+                <div class="added">
+                  <label for="online">Total (per month)</label>
+                </div>
+                <p>$120/yr</p>
+              </div>
+            </div>
+          </div>
+          <div id="thank-you">
+            <img src="/icon-thank-you.svg" alt="thank you image" />
+            <h3>Thank you!</h3>
+            <p>
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at <a href="#">support@victorsgaming.com</a>
+            </p>
+          </div>
+          <div class="bottom">
+            <div>
+              <input class="back-btn" type="button" value="Go Back" />
+            </div>
+            <div>
+              <input class="next-btn" type="button" value="Next Step" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
