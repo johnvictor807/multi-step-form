@@ -15,6 +15,13 @@ const monthth = document.querySelectorAll(".monnth");
 const yeaar = document.querySelectorAll(".yeaar");
 const monthRadio = document.querySelector("#month");
 const yearRadio = document.querySelector("#year");
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+const phone = document.querySelector("#phone");
+const nameValid = document.querySelector("#name-err");
+const emailValid = document.querySelector("#email-err");
+const phoneValid = document.querySelector("#phone-err");
+const selectPlan = document.querySelectorAll(".thumbnails");
 
 let group = [stepOne, stepTwo, stepThree, stepFour, submit];
 
@@ -31,27 +38,38 @@ headers[count].style.cssText =
 
 function nextPage(event) {
   if (event.target.className == "next-btn") {
-    if (count <= 2) {
-      headers[count].style = "none";
-      headers[count + 1].style.cssText =
-        "background: hsl(206, 94%, 87%); color: hsl(213, 96%, 18%); font-weight: bold";
-    }
-    group[count].style.display = "none";
-    group[count + 1].style.display = "block";
-    if (group[2].style.display == "block") {
-      if (yearRadio.checked) {
-        yeaar.forEach((e) => (e.style.display = "block"));
-        monthth.forEach((e) => (e.style.display = "none"));
-      } else if (monthRadio.checked) {
-        yeaar.forEach((e) => (e.style.display = "none"));
-        monthth.forEach((e) => (e.style.display = "block"));
+    validateForm();
+    {
+      if (
+        name.value.trim() === "" ||
+        !isValidEmail(email.value) ||
+        isNaN(phone.value)
+      ) {
+        validateForm();
+      } else {
+        if (count < 3) {
+          headers[count].style = "none";
+          headers[count + 1].style.cssText =
+            "background: hsl(206, 94%, 87%); color: hsl(213, 96%, 18%); font-weight: bold";
+        }
+        group[count].style.display = "none";
+        group[count + 1].style.display = "block";
+        if (group[2].style.display == "block") {
+          if (yearRadio.checked) {
+            yeaar.forEach((e) => (e.style.display = "block"));
+            monthth.forEach((e) => (e.style.display = "none"));
+          } else if (monthRadio.checked) {
+            yeaar.forEach((e) => (e.style.display = "none"));
+            monthth.forEach((e) => (e.style.display = "block"));
+          }
+        }
+        backButton.style.display = "block";
+        if (count > 2) {
+          bottom.style.display = "none";
+        }
+        count++;
       }
     }
-    backButton.style.display = "block";
-    if (count > 2) {
-      bottom.style.display = "none";
-    }
-    count++;
   } else if (event.target.className == "back-btn") {
     if (count > 0) {
       headers[count].style = "none";
@@ -79,3 +97,46 @@ function monthYear(e) {
 
 bottom.addEventListener("click", nextPage);
 moYr.addEventListener("click", monthYear);
+
+//Form validation section
+function validateForm() {
+  if (name.value.trim() === "") {
+    nameValid.style.display = "block";
+    name.style.border = "1px, solid, hsl(354, 84%, 57%)";
+  } else {
+    nameValid.style.display = "none";
+    name.style.cssText = "";
+  }
+  if (!isValidEmail(email.value)) {
+    emailValid.style.display = "block";
+    email.style.border = "1px, solid, hsl(354, 84%, 57%)";
+  } else {
+    emailValid.style.display = "none";
+    email.style.cssText = "";
+  }
+  if (isNaN(phone.value) || phone.value == "") {
+    phoneValid.style.display = "block";
+    phone.style.border = "1px, solid, hsl(354, 84%, 57%)";
+  } else {
+    phoneValid.style.display = "none";
+    phone.style.cssText = "";
+  }
+}
+
+function isValidEmail(email) {
+  let re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
+
+function validateFormB() {
+  const name = document.querySelector("#name");
+  const email = document.querySelector("#email");
+  const phone = document.querySelector("#phone");
+
+  if (
+    !name.value.trim() == "" &&
+    isValidEmail(email.value) &&
+    typeof phone.value == "number"
+  ) {
+  }
+}

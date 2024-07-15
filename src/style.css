@@ -293,7 +293,31 @@ span > input:hover {
   margin-top: 4px;
   margin-bottom: 4px;
 }
+
+form > label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.err {
+  color: hsl(354, 84%, 57%);
+  font-weight: bold;
+  font-size: small;
+}
+
 #right-side-1 {
+  display: none;
+}
+
+#name-err {
+  display: none;
+}
+
+#email-err {
+  display: none;
+}
+
+#phone-err {
   display: none;
 }
 
@@ -322,38 +346,45 @@ span > input:hover {
 @media (max-width: 768px) {
   html,
   body {
+    margin: 0;
+    width: 100%;
     height: 100%;
-    align-items: ;
-    display: flex;
-    justify-content: center;
+    display: block;
     background: hsl(206, 94%, 87%);
   }
 
   #app {
+    border-radius: 0;
     background: hsl(0, 0%, 100%);
-    border-radius: 15px;
     width: 100vw;
     height: 100vh;
-    position: relative;
+    padding: 0;
   }
 
   #hero {
+    width: 100vw;
+    height: 100%;
+    max-width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     position: relative;
+    margin: 0;
   }
 
   aside {
     display: flex;
     justify-content: center;
-    margin-left: 40px;
-    align-items: flex-start;
-    width: 85vw;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
     height: 15vh;
     background-image: url("/bg-sidebar-mobile.svg");
     background-size: cover;
     background-position: center;
     border-radius: 0;
+    padding: 0;
   }
 
   .left-pane-items {
@@ -362,7 +393,6 @@ span > input:hover {
 
   .left-pane-items > h1 {
     font-size: 15px;
-    margin: 10px;
     font-weight: normal;
     color: hsl(0, 0%, 100%);
     border: 1.5px solid hsl(0, 0%, 100%);
@@ -370,17 +400,25 @@ span > input:hover {
   }
 
   .rightside {
+    font-size: 12px;
     position: absolute;
     background: hsl(0, 0%, 100%);
-    margin: 100px 0 0 30px;
+    margin: 100px 0 0 0;
     padding: 5px 35px;
     border-radius: 10px;
-    width: 60vw;
+    width: 55vw;
     top: 0;
     z-index: 1;
     max-height: 100%;
   }
 
+  #select-plan > h3 {
+    font-size: 24px;
+  }
+
+  .text-content > h4 {
+    font-size: 14px;
+  }
   .list {
     display: none;
   }
@@ -408,7 +446,7 @@ span > input:hover {
   .bottom {
     display: flex;
     width: 60vw;
-    position: relative;
-    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
   }
 }
