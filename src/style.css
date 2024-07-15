@@ -410,6 +410,7 @@ form > label {
     top: 0;
     z-index: 1;
     max-height: 100%;
+    height: 70vh;
   }
 
   #select-plan > h3 {
@@ -445,8 +446,12 @@ form > label {
 
   .bottom {
     display: flex;
-    width: 60vw;
-    position: absolute;
-    bottom: 0;
+    width: 55vw;
+  }
+
+  #name-err,
+  #email-err,
+  #phone-err {
+    font-size: 10px;
   }
 }

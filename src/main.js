@@ -43,7 +43,8 @@ function nextPage(event) {
       if (
         name.value.trim() === "" ||
         !isValidEmail(email.value) ||
-        isNaN(phone.value)
+        isNaN(phone.value) ||
+        phone.value == ""
       ) {
         validateForm();
       } else {
