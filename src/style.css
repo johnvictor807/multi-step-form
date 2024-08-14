@@ -344,6 +344,7 @@ form > label {
   }
 
   #app {
+    position: fixed;
     border-radius: 0;
     background: hsl(0, 0%, 100%);
     width: 100vw;
@@ -410,8 +411,16 @@ form > label {
     font-size: 10px;
   }
 
+  #select-plan {
+    height: 100%;
+  }
+
   #select-plan > h3 {
     font-size: 28px;
+  }
+
+  .selct {
+    row-gap: 5px;
   }
 
   .text-content > h4 {
@@ -445,6 +454,8 @@ form > label {
     width: 48vw;
     border-radius: 3px;
     margin: 5px 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .thumbnails > img {
@@ -468,26 +479,33 @@ form > label {
     border: 1px solid hsl(243, 100%, 62%);
     border-radius: 10px;
     flex: 1;
-    padding: 0px 10px;
+    padding: 0 9px 0px 5px;
     margin: 10px 0;
-    max-width: 100%;
+    max-width: 95%;
     justify-content: space-between;
   }
 
   .add1 {
-    display: inline-flex;
+    display: flex;
+    padding-right: 0;
+    width: 70%;
+    margin-right: 10px;
   }
 
   .added {
     padding: 5px 0;
-    width: 7rem;
+    /* width: 7rem; */
     max-width: 100%;
     margin-left: 5px;
-    margin-right: 20px;
+    margin-right: 0px;
   }
 
   .added > label {
     font-size: 12px;
+  }
+
+  .added p {
+    font-size: 13px;
   }
 
   .sum-stack {
