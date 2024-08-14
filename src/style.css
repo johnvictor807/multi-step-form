@@ -341,7 +341,6 @@ form > label {
     height: 100%;
     display: block;
     background: hsl(206, 94%, 87%);
-    position: fixed;
   }
 
   #app {
@@ -367,7 +366,7 @@ form > label {
   aside {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100vw;
     max-width: 100%;
     height: 15vh;
@@ -375,7 +374,8 @@ form > label {
     background-size: cover;
     background-position: center;
     border-radius: 0;
-    padding: 0;
+    padding: 20px 0 0 0;
+    margin: 0;
   }
 
   .left-pane-items {
@@ -392,15 +392,15 @@ form > label {
 
   .rightside {
     font-size: 12px;
-    position: absolute;
+    position: fixed;
     background: hsl(0, 0%, 100%);
-    margin: 110px 0 0 0;
+    margin: 100px 0 0 0;
     padding: 5px 35px;
-    border-radius: 0px;
-    width: 55vw;
+    border-radius: 10px;
+    width: 60vw;
     top: 0;
     z-index: 1;
-    max-height: 100%;
+    max-height: 65vh;
     height: 65vh;
   }
 
