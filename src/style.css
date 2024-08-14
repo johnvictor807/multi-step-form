@@ -329,6 +329,10 @@ form > label {
   display: none;
 }
 
+.change-plan {
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   html,
   body {

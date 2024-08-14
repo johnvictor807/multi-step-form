@@ -283,3 +283,11 @@ document.querySelector(".selct").addEventListener("click", registerClick);
 document
   .querySelector("#select-addon")
   .addEventListener("click", registerAddon);
+
+document
+  .querySelectorAll(".inputs")
+  .forEach((e) => e.addEventListener("blur", resetViewportScale));
+function resetViewportScale() {
+  const viewportMetaTag = document.querySelector('meta[name="viewport"]');
+  viewportMetaTag.content = "width=device-width, initial-scale=1.0";
+}
